@@ -8,13 +8,13 @@ import {
   REGISTER,
   persistStore,
 } from "redux-persist";
-import { contactsReducer } from "./balanceSlice";
-import { filterReducer } from "./localeSlice";
+import { contactsReducer } from "./contactsSlice";
+import { filterReducer } from "./filterSlice";
 
 export const store = configureStore({
   reducer: {
-    balance: contactsReducer,
-    locale: filterReducer,
+    contacts: contactsReducer,
+    filter: filterReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
